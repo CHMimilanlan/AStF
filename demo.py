@@ -1,7 +1,8 @@
 import cv2
 import imageio
+from os.path import join as pjoin
 import os
-
+from pathlib import Path
 
 def mp4_to_gif(input_path, output_path, fps=10, scale=1.0):
     """
@@ -56,7 +57,14 @@ def mp4_to_gif(input_path, output_path, fps=10, scale=1.0):
 
 # 使用示例
 if __name__ == "__main__":
-    input_mp4 = "2.mp4"  # 替换为你的MP4文件路径
-    output_gif = "2.gif"  # 输出的GIF文件名
-    # 转换为GIF，设置fps为10，缩放为0.5倍大小
-    mp4_to_gif(input_mp4, output_gif, fps=30, scale=0.5)
+    basedir = "videos"
+    outpath = "assets"
+    for i in range(1,5):
+        numdir = pjoin(basedir, str(i))
+        os.makedirs(pjoin(outpath, str(i)), exist_ok=True)
+        for mp4 in os.listdir(numdir):
+            mp4path = pjoin(numdir, mp4)
+            print(f"process {mp4path}")
+            name = Path(mp4path).stem
+            output_gif = pjoin(pjoin(outpath, str(i)), f"{name}.gif")  # 输出的GIF文件名
+            mp4_to_gif(mp4path, output_gif, fps=25, scale=0.5)
