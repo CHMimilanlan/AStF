@@ -67,4 +67,4 @@ if __name__ == "__main__":
             print(f"process {mp4path}")
             name = Path(mp4path).stem
             output_gif = pjoin(pjoin(outpath, str(i)), f"{name}.gif")  # 输出的GIF文件名
-            mp4_to_gif(mp4path, output_gif, fps=25, scale=0.5)
+            mp4_to_gif(mp4path, output_gif, fps=10, scale=0.5)
