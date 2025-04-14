@@ -1,0 +1,62 @@
+import cv2
+import imageio
+import os
+
+
+def mp4_to_gif(input_path, output_path, fps=10, scale=1.0):
+    """
+    将MP4视频转换为GIF文件
+
+    参数:
+        input_path: 输入的MP4文件路径
+        output_path: 输出的GIF文件路径
+        fps: 输出GIF的帧率(默认10)
+        scale: 缩放比例(默认1.0不缩放)
+    """
+    # 读取视频文件
+    cap = cv2.VideoCapture(input_path)
+
+    # 获取视频的原始帧率
+    original_fps = cap.get(cv2.CAP_PROP_FPS)
+
+    # 计算跳帧间隔以匹配目标fps
+    frame_interval = max(1, int(round(original_fps / fps)))
+
+    frames = []
+    frame_count = 0
+
+    while True:
+        ret, frame = cap.read()
+
+        if not ret:
+            break
+
+        # 按间隔采集帧
+        if frame_count % frame_interval == 0:
+            # 转换颜色空间从BGR到RGB
+            rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+
+            # 缩放图像
+            if scale != 1.0:
+                width = int(rgb_frame.shape[1] * scale)
+                height = int(rgb_frame.shape[0] * scale)
+                rgb_frame = cv2.resize(rgb_frame, (width, height))
+
+            frames.append(rgb_frame)
+
+        frame_count += 1
+
+    cap.release()
+
+    # 保存为GIF
+    imageio.mimsave(output_path, frames, fps=fps)
+
+    print(f"GIF保存成功: {output_path}")
+
+
+# 使用示例
+if __name__ == "__main__":
+    input_mp4 = "1.mp4"  # 替换为你的MP4文件路径
+    output_gif = "1.gif"  # 输出的GIF文件名
+    # 转换为GIF，设置fps为10，缩放为0.5倍大小
+    mp4_to_gif(input_mp4, output_gif, fps=30, scale=0.5)
