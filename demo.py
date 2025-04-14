@@ -56,7 +56,7 @@ def mp4_to_gif(input_path, output_path, fps=10, scale=1.0):
 
 # 使用示例
 if __name__ == "__main__":
-    input_mp4 = "1.mp4"  # 替换为你的MP4文件路径
-    output_gif = "1.gif"  # 输出的GIF文件名
+    input_mp4 = "2.mp4"  # 替换为你的MP4文件路径
+    output_gif = "2.gif"  # 输出的GIF文件名
     # 转换为GIF，设置fps为10，缩放为0.5倍大小
     mp4_to_gif(input_mp4, output_gif, fps=30, scale=0.5)

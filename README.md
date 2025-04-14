@@ -10,5 +10,5 @@
       <source id="mp4" src="1.gif" type="video/mp4">
 </video>
 
-![自定义动图标题](1.gif)
+![自定义动图标题](2.gif)
 
