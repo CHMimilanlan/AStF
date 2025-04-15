@@ -69,6 +69,6 @@ if __name__ == "__main__":
     #         output_gif = pjoin(pjoin(outpath, str(i)), f"{name}.gif")  # 输出的GIF文件名
     #         mp4_to_gif(mp4path, output_gif, fps=10, scale=0.5)
 
-    mp4path = r"1/teaser.mp4"
-    output_gif = "1.gif"
+    mp4path = r"Style_depressed_01_000_Content_childlike_16_000.mp4"
+    output_gif = "Style_depressed_01_000_Content_childlike_16_000.gif"
     mp4_to_gif(mp4path, output_gif, fps=25, scale=0.5)
