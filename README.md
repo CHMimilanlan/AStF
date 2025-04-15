@@ -1,5 +1,5 @@
 # AStF: Motion Style Tranfer via Adaptive Statistics Fusor
-This is the official implementation of "AStF: Motion Style Tranfer via Adaptive Statistics Fusor"
+This is the official implementation of "AStF: Motion Style Tranfer via Adaptive Statistics Fusor". We provide several visualized qualitative results below. Our code will be released upon acceptance.
 
 
 
