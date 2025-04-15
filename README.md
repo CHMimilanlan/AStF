@@ -3,7 +3,7 @@ This is the official implementation of "AStF: Motion Style Tranfer via Adaptive 
 
 
 
-<img src="assets/teaser.gif" width="400">    
+<img src="assets/teaser.gif" width="600">    
 
 Our AStF effectively transfers style between two motions, while preserving contents.
 
@@ -30,11 +30,11 @@ Our AStF effectively transfers style between two motions, while preserving conte
 
 ## Visualization Results for Comparison
 
-|               Content Motion (Childlike Jump)               |              <br/> <img src="assets/4/childlike_16_000.gif" width="250">              |        
-|:-----------------------------------------------------------:|:------------------------------------------------------:|
-|               Style Motion (Depressed Walk)                 | <img src="assets/4/depressed_01_000.gif" width="250"> |
-|                         AStF (Ours)                         |         <img src="assets/4/my_childlike_16_000_depressed_01_000.gif" width="250">                             |        
-| MoST (Kim et al.)  | <img src="assets/4/most_childlike_16_000_depressed_01_000.gif" width="250"> |
-| Park et al.  | <img src="assets/4/ref_childlike_jumping_depressed_walking_fs.gif" width="250"> |
+|               Content Motion (Childlike Jump)               |              <br/> <img src="assets/4/childlike_16_000.gif" width="250">              | Arms-outstretched is the content that we do not desired to retain                                                                                     |
+|:-----------------------------------------------------------:|:------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------|
+|               Style Motion (Depressed Walk)                 | <img src="assets/4/depressed_01_000.gif" width="250"> | Head-down, hunched posture, which represents the style of depressed in the style motion, is what we aim to extract and transfer to the content motion |
+|                         AStF (Ours)                         |         <img src="assets/4/my_childlike_16_000_depressed_01_000.gif" width="250">  | our AStF effectively transferred the depressed style while retaining the content jump                                                                 |  
+| MoST (Kim et al.)  | <img src="assets/4/most_childlike_16_000_depressed_01_000.gif" width="250"> | Lack of depress style expression                                                                                                                      |
+| Park et al.  | <img src="assets/4/ref_childlike_jumping_depressed_walking_fs.gif" width="250"> | Awkward Limbs                                                                                                                                         |
 
 
