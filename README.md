@@ -64,10 +64,10 @@ Our AStF effectively transfers style between two motions, while preserving conte
 ## Additional Experiment Results
 
 ### Ablation on Gate-Self-Attention
-|Model Variants|Style FID↓|Content FID↓|Style Acc↓|Content Acc↓|Geo Dist↓|
+| Model Variants |Style FID↓| Content FID↓ |Style Acc↓| Content Acc↓ | Geo Dist↓ |
 |-|-|-|-|-|-|
-|w/o GSA|0.349|0.00252|0.655|0.724|0.537|
-|AStF(Full Model)|0.157|0.00115|0.930|0.903|0.440|
+|w/o GSA|0.349|0.00452|0.655|0.624|0.617|
+|w/ GSA|0.157|0.00115|0.930|0.903|0.440|
 
 
 
