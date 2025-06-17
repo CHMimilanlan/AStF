@@ -78,7 +78,7 @@ Our AStF effectively transfers style between two motions, while preserving conte
 |AStF(Full Model)|0.157| 0.00115|0.930|0.903|0.440|
 
 
-### Generalization Experiment
+### Generalization Experiment to unseen styles
 | |Style FID↓|Content FID↓|Style Acc↓|Content Acc↓|Geo Dist↓|
 |-|-|-|-|-|-|
 |Aberman et al.|1.849|0.00551|0.129|0.491|0.919|
