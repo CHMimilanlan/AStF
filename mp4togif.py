@@ -57,9 +57,10 @@ def mp4_to_gif(input_path, output_path, fps=10, scale=1.0):
 
 # 使用示例
 if __name__ == "__main__":
-    # basedir = "videos"
-    # outpath = "assets"
-    # for i in range(1,5):
+    basedir = "render_video"
+    outpath = "assets"
+    os.makedirs(outpath, exist_ok=True)
+    # for i in range(4,5):
     #     numdir = pjoin(basedir, str(i))
     #     os.makedirs(pjoin(outpath, str(i)), exist_ok=True)
     #     for mp4 in os.listdir(numdir):
@@ -67,16 +68,28 @@ if __name__ == "__main__":
     #         print(f"process {mp4path}")
     #         name = Path(mp4path).stem
     #         output_gif = pjoin(pjoin(outpath, str(i)), f"{name}.gif")  # 输出的GIF文件名
-    #         mp4_to_gif(mp4path, output_gif, fps=10, scale=0.5)
+    #         mp4_to_gif(mp4path, output_gif, fps=30, scale=0.5)
 
-    basedir = "11"
-    outpath = "assets"
-    for mp4 in os.listdir(basedir):
-        mp4path = pjoin(basedir, mp4)
-        print(f"process {mp4path}")
-        name = Path(mp4path).stem
-        output_gif = pjoin(pjoin(outpath, f"{name}.gif"))  # 输出的GIF文件名
-        mp4_to_gif(mp4path, output_gif, fps=25, scale=0.5)
+    for i in ["teaser"]:
+        numdir = pjoin(basedir, str(i))
+        os.makedirs(pjoin(outpath, str(i)), exist_ok=True)
+        for mp4 in os.listdir(numdir):
+            mp4path = pjoin(numdir, mp4)
+            print(f"process {mp4path}")
+            name = Path(mp4path).stem
+            output_gif = pjoin(pjoin(outpath, str(i)), f"{name}.gif")  # 输出的GIF文件名
+            mp4_to_gif(mp4path, output_gif, fps=30, scale=0.5)
+
+
+
+    # basedir = "11"
+    # outpath = "assets"
+    # for mp4 in os.listdir(basedir):
+    #     mp4path = pjoin(basedir, mp4)
+    #     print(f"process {mp4path}")
+    #     name = Path(mp4path).stem
+    #     output_gif = pjoin(pjoin(outpath, f"{name}.gif"))  # 输出的GIF文件名
+    #     mp4_to_gif(mp4path, output_gif, fps=25, scale=0.5)
 
     # mp4path = r"Style_depressed_01_000_Content_childlike_16_000.mp4"
     # output_gif = "Style_depressed_01_000_Content_childlike_16_000.gif"
