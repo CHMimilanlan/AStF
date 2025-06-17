@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c83c0d02-4fef-492a-b440-6ddaae6fc771" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/tsne_from_trained/tsne_from_trained.md" beforeDir="false" afterPath="$PROJECT_DIR$/tsne_from_trained/tsne_from_trained.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsne_reproduced_figure1/tsne_reproduced_figure1.md" beforeDir="false" afterPath="$PROJECT_DIR$/tsne_reproduced_figure1/tsne_reproduced_figure1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,14 +23,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.mp4togif.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Workman03/PythonProject/AStF/tsne_from_trained_model"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.mp4togif.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Workman03/PythonProject/AStF/tsne_from_trained_model&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Workman03\PythonProject\AStF\tsne_from_trained_model" />
