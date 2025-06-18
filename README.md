@@ -2,7 +2,7 @@
 This is the official implementation of "AStF: Motion Style Tranfer via Adaptive Statistics Fusor". We provide several visualized qualitative results below. Our code will be released upon acceptance.  
 
 
-## Friendly Reminder: Due to the large number of GIF files, some files may take time to load. If a GIF appears static or fails to display, please wait a moment for it or directly refresh it to fully load. The complete visualization results will appear shortly.
+## Friendly Reminder: Due to the large number of GIF files, some files may take time to load. If a GIF appears static or fails to display, please wait a moment or directly refresh it to fully load. The complete visualization results will appear shortly.
 
 
 <img src="assets/teaser/teaser.gif" width="600">    
