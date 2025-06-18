@@ -3,8 +3,6 @@ This is the official implementation of "AStF: Motion Style Tranfer via Adaptive 
 
 
 ## Friendly Reminder: Due to the number of GIFs, some files may take time to load. If a GIF appears static or fails to display, please wait a moment for it or directly refresh it to fully load. The complete visualization results will appear shortly.
-## For the additional experiment results table, please scroll down to the bottom of the page
-
 
 
 <img src="assets/teaser/teaser.gif" width="600">    
@@ -61,33 +59,5 @@ Our AStF effectively transfers style between two motions, while preserving conte
 
 
 
-## Additional Experiment Results
-
-### Ablation on Gate-Self-Attention
-| Model Variants |Style FID↓| Content FID↓ |Style Acc↓| Content Acc↓ | Geo Dist↓ |
-|-|-|-|-|-|-|
-|w/o GSA|0.349|0.00452|0.655|0.624|0.617|
-|w/ GSA|0.157|0.00115|0.930|0.903|0.440|
-
-
-
-### Ablation on HOS-Attn
-|Model Variants|Style FID↓|Content FID↓|Style Acc↓|Content Acc↓|Geo Dist↓|
-|-|-|-|-|-|-|
-|w/o HOS-Attn|0.408|0.00495|0.606|0.593|0.652|
-|AStF(Full Model)|0.157| 0.00115|0.930|0.903|0.440|
-
-
-### Generalization Experiment to unseen styles
-| |Style FID↓|Content FID↓|Style Acc↓|Content Acc↓|Geo Dist↓|
-|-|-|-|-|-|-|
-|Aberman et al.|1.849|0.00551|0.129|0.491|0.919|
-|MotionPuzzle|1.983|0.00569|0.131|0.512|0.815|
-|Park et al.|1.891|0.00539|0.124|0.457|0.924|
-|MoST|1.624|0.00501|0.151|0.681|0.721|
-|GenMoStyle|0.934|0.00230|0.395|0.748|0.552|
-|AStF(Our  Model)|0.712| 0.00158|0.539|0.806|0.509|
-
-					
 
 
