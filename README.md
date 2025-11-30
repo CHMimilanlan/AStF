@@ -112,7 +112,7 @@ The BFA preprocessing pipeline will be released soon.
 
 ### 📘 Xia Dataset
 
-### **1. Download the Raw Motion Data**
+#### **1. Download the Raw Motion Data**
 
 Download the archive **`mocap_xia.zip`** and place it under:
 
@@ -124,9 +124,8 @@ You can obtain the dataset from the official source:
 
 🔗 [https://deepmotionediting.github.io/style_transfer](https://deepmotionediting.github.io/style_transfer)
 
----
 
-### **2. Unzip the Dataset**
+#### **2. Unzip the Dataset**
 
 ```bash
 cd ./data
@@ -135,9 +134,8 @@ unzip mocap_xia.zip
 
 This extracts the raw `.bvh` motion files required for preprocessing.
 
----
 
-### **3. Preprocess the Raw Motions**
+#### **3. Preprocess the Raw Motions**
 
 Run the preprocessing script:
 
