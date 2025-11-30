@@ -165,6 +165,15 @@ We are currently organizing the preprocessing pipeline, and we will update the r
 
 ---
 
+## Quick Start
+
+Refer to demo.sh for a demo demonstration. Set arguments cnt_clip and sty_clip in demo.sh.
+```bash
+bash demo.sh
+```
+The generated bvh file will be saved.
+
+---
 
 
 ## 🔧 Train Script
@@ -177,8 +186,6 @@ CUDA_VISIBLE_DEVICES=1 python train.py --save_path results
 The result checkpoint will be saved in results directory.
 
 ---
-
-
 
 
 ## 🧪 Evaluation Script
