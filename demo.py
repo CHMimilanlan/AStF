@@ -78,19 +78,3 @@ if __name__ == '__main__':
     # # Save output
     save_bvh = SaveBVH(args)
     save_bvh.save_output(gen_body, gen_traj, color="orange",filename=f"03gen_{args.cnt_clip}_{args.sty_clip}")  
-
-
-    # cnt_traj = cnt_clip[0,cfg["joint_dims"]:,:cnt_length,:].cpu().detach().numpy()
-    # cnt_body = cnt_clip[0, :cfg["joint_dims"], :cnt_length,:].cpu().detach().numpy()
-    # save_bvh = SaveBVH(args)
-    # save_bvh.save_output(cnt_body, cnt_traj, color="blue", filename=f"01cnt")  
-
-
-    sty_traj = sty_clip[0,cfg["joint_dims"]:,:cnt_length,:].cpu().detach().numpy()
-    sty_body = sty_clip[0, :cfg["joint_dims"], :cnt_length,:].cpu().detach().numpy()
-    save_bvh = SaveBVH(args)
-    save_bvh.save_output(sty_body, sty_traj,  color= (1.0, 0.55, 0.0), filename=f"02sty")  
-    save_bvh.save_split1(sty_body, sty_traj,  color= (1.0, 0.55, 0.0), filename=f"03sty")  
-
-
-

@@ -147,9 +147,9 @@ python xia_preprocess.py
 After preprocessing, the following directories will be created:
 
 ```
-preprocessed_xia/          # Processed training data + style/content distributions
-preprocessed_xia_test/     # Processed testing sequences
-preprocessed_xia_gt/       # Ground-truth training sequences for evaluation
+preprocessed_xia/         
+preprocessed_xia_test/    
+preprocessed_xia_gt/      
 ```
 
 These folders are required for **training** and **evaluation** of ASTF on Xia.
@@ -167,9 +167,6 @@ We are currently organizing the preprocessing pipeline, and we will update the r
 
 
 
-
-
-
 ## 🔧 Train Script
 
 Refer to arguments.py for detailed arguments.
@@ -183,13 +180,24 @@ The result checkpoint will be saved in results directory.
 
 
 
+
 ## 🧪 Evaluation Script
 
-```bash
-CUDA_VISIBLE_DEVICES=1 python eval_all.py --model_path pretrained/astf.pth --cntcls_path pretrained/cntcls.pth --stycls_path pretrained/stycls.pth
-```
----
+### **Run the evaluation**
 
+```bash
+CUDA_VISIBLE_DEVICES=1 \
+python eval_all.py \
+    --model_path MODEL_PATH \
+    --cntcls_path CNTCLS_PATH \
+    --stycls_path STYCLS_PATH
+```
+
+* **`--model_path`**: Path to the pretrained ASTF generator checkpoint. *(Default: `pretrained/astf.pth`)*
+* **`--cntcls_path`**: Path to the pretrained content classifier used for content-based metrics. *(Default: `pretrained/cntcls.pth`)*
+* **`--stycls_path`**: Path to the pretrained style classifier used for style-based metrics. *(Default: `pretrained/stycls.pth`)*
+
+---
 
 
 ## 🙏 Acknowledgements

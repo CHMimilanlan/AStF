@@ -26,7 +26,6 @@ class SaveBVH:
 
         # original output
         positions = restore_animation(output[:, :, :3], traj)
-        # plot_static_3d_motion(positions, color_by='frame', save_path='3d_motion_by_frame.png')
 
         num = 6
         frames = positions.shape[0]
@@ -37,26 +36,7 @@ class SaveBVH:
         plot3d(positions[frames//2:], f"{filename}_1", color)
 
         print('Saving animation of %s in bvh...' % filename)
-        # to_bvh_cmu(positions, filename=filename, frametime=1.0/30.0)
-
-
-    def save_split1(self, output, traj, color, filename='output'):
-        output = denormalize(output, self.Xmean[:7], self.Xstd[:7])
-        output = np.transpose(output, (1, 2, 0))
-
-        traj = denormalize(traj, self.Xmean[-4:], self.Xstd[-4:])
-        traj = np.transpose(traj, (1, 2, 0))
-        # original output
-        positions = restore_animation(output[:, :, :3], traj)
-        # plot_static_3d_motion(positions, color_by='frame', save_path='3d_motion_by_frame.png')
-        num = 6
-        frames = positions.shape[0]
-        downfact = frames // num
-        positions = positions[::downfact]
-        frames = positions.shape[0]
-        plot3d_split(positions[:frames//2+1], f"{filename}_0", color)
-        plot3d_split(positions[frames//2 -1:], f"{filename}_1", color)
-        print('Saving animation of %s in bvh...' % filename)
+        to_bvh_cmu(positions, filename=filename, frametime=1.0/30.0)
 
 
 
@@ -86,42 +66,9 @@ def plot3d(datasets, filename, color):
 
     ax.set_axis_off()
     ax.set_ylim(-len(datasets) * trans, trans)
-
-    # ax.set_xlabel('X Label')
-    # ax.set_ylabel('Y Label')
-    # ax.set_zlabel('Z Label')
-
-    # ax.get_proj = lambda: np.dot(Axes3D.get_proj(ax), np.diag([1, 3, 1, 1]))
-
-    ax.view_init(elev=0, azim=-15)
-    # plt.show()    
-    fig.savefig(f"{filename}.png", transparent=True)
-    # fig.savefig(f"{filename}.jpg")
-
-def plot3d_split(datasets, filename, color):
-    pairs = [(0, 1), (1, 2), (2, 3), (3, 4), (0, 5), (5, 6), (6, 7), (7, 8),
-             (0, 9), (9, 10), (10, 11), (11, 12), (11, 13), (13, 14), (14, 15), (15, 16),
-             (11, 17), (17, 18), (18, 19), (19, 20)]  
-
-    fig = plt.figure()
-    ax = fig.add_subplot(111, projection='3d')
-
-    trans = 20
-    for idx, data in enumerate(datasets):
-        rotated_data = rotate_x_90(data)
-        ax.scatter(rotated_data[:, 0], rotated_data[:, 1] - idx * trans, rotated_data[:, 2], s=5, c=color)
-
-        for start, end in pairs:
-            ax.plot([rotated_data[start, 0], rotated_data[end, 0]],
-                    [rotated_data[start, 1] - idx * trans, rotated_data[end, 1] - idx * trans],
-                    [rotated_data[start, 2], rotated_data[end, 2]], color=color, linewidth=3, linestyle='--')
-
-    ax.set_axis_off()
-    ax.set_ylim(-len(datasets) * trans, trans)
-
     ax.view_init(elev=0, azim=-15)
     fig.savefig(f"{filename}.png", transparent=True)
-
+    print(f"Saving to {filename}.png")
 
 
 def my_save_output(output, traj, filename='output.bvh'):
@@ -169,9 +116,6 @@ def restore_animation(pos, traj, start=None, end=None):
 
 
 
-
-
-
 def to_bvh_cmu(targets, filename, silent=True, frametime=1.0/60.0):
     """
     from 21 to 31 joints
@@ -209,7 +153,6 @@ def to_bvh_cmu(targets, filename, silent=True, frametime=1.0/60.0):
 
     ik = JacobianInverseKinematics(anim, targetmap, iterations=10, damping=2.0, silent=silent)
     ik()
-    plot3d(anim.positions[0])
     BVH.save(filename, anim, names, frametime=frametime)
 
 
