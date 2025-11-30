@@ -60,8 +60,8 @@ fers over state-of-the-arts.
 
 ## 🗂 TODO
 
-* [ ] Release train and test code
-* [ ] Release Xia checkpoint
+* [x] Release train and test code
+* [x] Release Xia checkpoint
 * [ ] Release BFA checkpoint
 
 ---
