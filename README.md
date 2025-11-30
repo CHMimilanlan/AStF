@@ -22,7 +22,7 @@
   <h3 align="center">
     <a href="https://arxiv.org/abs/2511.04192">Paper</a> |
     <a href="https://github.com/CHMimilanlan/AStFResultGallery">Results Gallery</a> |
-    <a href="">Models</a>
+    <a href="https://huggingface.co/MilanMagik/AStF">Models</a>
   </h3>
 </p>
 
@@ -61,9 +61,138 @@ fers over state-of-the-arts.
 ## 🗂 TODO
 
 * [ ] Release train and test code
-* [ ] Release checkpoint
+* [ ] Release Xia checkpoint
+* [ ] Release BFA checkpoint
 
 ---
+
+## 🔥 Pretrained Models
+
+We release the pretrained ASTF models on **HuggingFace**.
+You can download them using either the `huggingface-cli` or by visiting the model page directly.
+
+### **🔗 HuggingFace Repository**
+👉 [https://huggingface.co/MilanMagik/AStF](https://huggingface.co/MilanMagik/AStF)
+
+### **📥 Download via CLI**
+To download the entire pretrained model package into a local directory named `AStF`, run:
+
+```bash
+huggingface-cli download MilanMagik/AStF --local-dir AStF
+```
+---
+
+## 🛠 Installation
+
+We train and test our AStF on the following environment.
+```
+Python >= 3.10
+CUDA >= 11.6
+```
+
+Create a conda environment and install dependencies:
+
+```bash
+git clone https://github.com/CHMimilanlan/AStF.git
+cd AStF
+conda create -n astf python=3.10
+conda activate astf
+pip install -r requirements.txt
+```
+
+---
+
+## 📦 Data Preparation
+
+Our ASTF model is evaluated on **both the Xia dataset and the BFA dataset**.
+Below we provide detailed instructions for preparing Xia.
+The BFA preprocessing pipeline will be released soon.
+
+---
+
+### 📘 Xia Dataset
+
+### **1. Download the Raw Motion Data**
+
+Download the archive **`mocap_xia.zip`** and place it under:
+
+```
+./data/
+```
+
+You can obtain the dataset from the official source:
+
+🔗 [https://deepmotionediting.github.io/style_transfer](https://deepmotionediting.github.io/style_transfer)
+
+---
+
+### **2. Unzip the Dataset**
+
+```bash
+cd ./data
+unzip mocap_xia.zip
+```
+
+This extracts the raw `.bvh` motion files required for preprocessing.
+
+---
+
+### **3. Preprocess the Raw Motions**
+
+Run the preprocessing script:
+
+```bash
+python xia_preprocess.py
+```
+
+
+After preprocessing, the following directories will be created:
+
+```
+preprocessed_xia/          # Processed training data + style/content distributions
+preprocessed_xia_test/     # Processed testing sequences
+preprocessed_xia_gt/       # Ground-truth training sequences for evaluation
+```
+
+These folders are required for **training** and **evaluation** of ASTF on Xia.
+
+---
+
+### 📙 BFA Dataset (Coming Soon)
+
+Our ASTF model is also evaluated on the **BFA dataset**, following the protocol described in our ACMMM’25 paper.
+
+The BFA data preparation scripts will be released soon.
+We are currently organizing the preprocessing pipeline, and we will update the repository with BFA support shortly.
+
+---
+
+
+
+
+
+
+## 🔧 Train Script
+
+Refer to arguments.py for detailed arguments.
+
+```bash
+CUDA_VISIBLE_DEVICES=1 python train.py --save_path results
+```
+The result checkpoint will be saved in results directory.
+
+---
+
+
+
+## 🧪 Evaluation Script
+
+```bash
+CUDA_VISIBLE_DEVICES=1 python eval_all.py --model_path pretrained/astf.pth --cntcls_path pretrained/cntcls.pth --stycls_path pretrained/stycls.pth
+```
+---
+
+
 
 ## 🙏 Acknowledgements
 
