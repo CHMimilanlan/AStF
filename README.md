@@ -54,7 +54,7 @@ fers over state-of-the-arts.
 ## 🔥 News
 
 * **[2025.07] Our paper is accepted by ACM Multimedia 2025 (ACMMM'25), Dublin! 🎉**
-
+* **[2025.11] Code, models, evaluation scripts are released.**
 
 ---
 
