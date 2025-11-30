@@ -1,17 +1,30 @@
-# 📌 AStF: Motion Style Transfer via Adaptive Statistics Fusor
-
-### **Official PyTorch Implementation of our ACMMM 2025 Paper** 🎉
-
-*Hanmo Chen**, Chenghao Xu*, Jiexi Yan†, Cheng Deng†
-
-(* equal contribution, † corresponding authors)
 
 
----
+<p align="center">
+<h1 align="center">📌AStF</h1>
+<h3 align="center">Motion Style Transfer via Adaptive Statistics Fusor</h3>
+<h4 align="center">ACM Multimedia 2025 (ACMMM'25)</h4>
+</p>
 
-## 🔥 News
+<p align="center">
+  <p align="center">
+    <a href="mailto:hmc@stu.xidian.edu.cn">Hanmo Chen</a><sup>1*</sup>
+    ·
+    <a href="mailto:chx@stu.xidian.edu.cn">Chenghao Xu</a><sup>1*</sup>
+    ·
+    <a href="mailto:yanjiexi@xidian.edu.cn">Jiexi Yan</a><sup>1†</sup>
+    ·
+    <a href="mailto:chdeng@mail.xidian.edu.cn">Cheng Deng</a><sup>1†</sup>
+    <br>
+    <sup>1</sup>Xidian University
+  </p>
 
-* **[2025.07] Our paper is accepted by ACM Multimedia 2025 (ACMMM'25), Dublin! 🎉**
+  <h3 align="center">
+    <a href="https://arxiv.org/abs/2511.04192">Paper</a> |
+    <a href="https://github.com/CHMimilanlan/AStFResultGallery">Results Gallery</a> |
+    <a href="">Models</a>
+  </h3>
+</p>
 
 ---
 
@@ -37,18 +50,11 @@ fers over state-of-the-arts.
 
 ---
 
-## 📄 Paper
 
-**AStF: Motion Style Transfer via Adaptive Statistics Fusor**
-ACM Multimedia 2025 (ACMMM’25)
-[[Paper PDF](https://arxiv.org/abs/2511.04192)]
+## 🔥 News
 
----
+* **[2025.07] Our paper is accepted by ACM Multimedia 2025 (ACMMM'25), Dublin! 🎉**
 
-## 🎬 Results Gallery
-
-We provide qualitative results on **Xia** and **BFA** datasets — including content retention & style fidelity cases.
-👉 **[Results Gallery Link](https://github.com/CHMimilanlan/AStFResultGallery)**
 
 ---
 
@@ -72,7 +78,6 @@ This codebase is built on top of the open-source implementation of
 ## 📚 Citation
 
 If you find our work useful, please cite our ACMMM 2025 paper:
-
 ```bibtex
 @inproceedings{chen2025astf,
   title={AStF: Motion Style Tranfer via Adaptive Statistics Fusor},
