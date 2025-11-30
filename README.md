@@ -10,11 +10,11 @@
   <p align="center">
     <a href="mailto:hmc@stu.xidian.edu.cn">Hanmo Chen</a><sup>1*</sup>
     ·
-    <a href="mailto:chx@stu.xidian.edu.cn">Chenghao Xu</a><sup>1*</sup>
+    <a>Chenghao Xu</a><sup>1*</sup>
     ·
-    <a href="mailto:yanjiexi@xidian.edu.cn">Jiexi Yan</a><sup>1†</sup>
+    <a>Jiexi Yan</a><sup>1†</sup>
     ·
-    <a href="mailto:chdeng@mail.xidian.edu.cn">Cheng Deng</a><sup>1†</sup>
+    <a>Cheng Deng</a><sup>1†</sup>
     <br>
     <sup>1</sup>Xidian University
   </p>
